@@ -1,32 +1,58 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import {Container, Heading, Text, Box, Stack, Button, Textarea, Input} from '@chakra-ui/react'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>bagi duit dong</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Bagi gw duit, makasih
-        </h1>
+      <Container centerContent='true'>
+        <Box w='90%'>
+          <Heading size='2xl' mt='20'>
+            Bagi gw duit, makasih
+          </Heading>
+          <Text fontSize='2xl'>
+            tempat orang bagi duit ke gw
+          </Text>
+          
+          <Box mt='10px' w='90%'>
+            <Text mb="8px">Pesan:</Text>
+            <Textarea placeholder="buat jajan indomie" />
+            <Text mb="8px">dari:</Text>
+            <Input placeholder="neneng" />
+            <Text mt='2px' mb="8px">sebanyak:</Text>
+            <Stack spacing={4} direction="row" align="center">
+              <Button colorScheme="teal" size="sm">
+                Rp 2.000
+              </Button>
+              <Button colorScheme="teal" size="sm">
+                Rp 5.000
+              </Button>
+              <Button colorScheme="teal" size="sm">
+                Rp 10.000
+              </Button>
+            </Stack>
+            
 
-        <p className={styles.description}>
-          tempat orang bagi duit ke RPP
-        </p>
+          </Box>
+
+          
+
+          
+          
+        </Box>
+        
+          
 
         
-      </main>
+          
+      </Container>
 
-      <footer className={styles.footer}>
 
-          Powered by{' '}
-          chbimo
-
-      </footer>
+ 
     </div>
   )
 }
